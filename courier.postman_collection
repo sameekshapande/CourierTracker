@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "33cef829-2631-4499-b759-9340070f3b35",
+		"name": "courieer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "courierPackageCharge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "user",
+						"type": "default"
+					},
+					{
+						"key": "password",
+						"value": "user",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"weight\":10,\r\n    \"charge\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/api/rest/courierTracker/courierPackageCharge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"api",
+						"rest",
+						"courierTracker",
+						"courierPackageCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookNow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"customerName\":\"RAVI\",\r\n\"recieverName\":\"abc\",\r\n\"recieverAddress\":\"abcAddress\",\r\n\"courierWeight\":\"9\",\r\n\"receiverphoneNumber\":\"9422556981\",\r\n\"status\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/courierTracker/bookNow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"courierTracker",
+						"bookNow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderDetailsByOrderId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/courierTracker/orderDetailsByOrderId?orderId=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"courierTracker",
+						"orderDetailsByOrderId"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOrderStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"orderId\":9,\r\n\"status\":\"PickedUp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/courierTracker/updateOrderStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"courierTracker",
+						"updateOrderStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrderPkgId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/courierTracker/getAllOrderPkgId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"courierTracker",
+						"getAllOrderPkgId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordersAssignedToDeliveryBoy",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "createStoreAgents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/storeAgent/createStoreAgents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"storeAgent",
+						"createStoreAgents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStoreAgentDetails",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "removeStoreAgents",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getUserLogin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/login/loginDetail?phoneNum=\"9765260505\"&password=\"12345\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"login",
+						"loginDetail"
+					],
+					"query": [
+						{
+							"key": "phoneNum",
+							"value": "\"9765260505\""
+						},
+						{
+							"key": "password",
+							"value": "\"12345\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
