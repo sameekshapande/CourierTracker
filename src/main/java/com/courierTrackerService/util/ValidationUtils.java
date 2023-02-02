@@ -22,7 +22,7 @@ public class ValidationUtils {
 	@Autowired
 	private CourierPkgWeightChargeRepository courierPkgWeightChargeRepo;
 
-	@GetMapping(value = "/searchRates", produces = MediaType.APPLICATION_JSON_VALUE)
+	 
 	public boolean checkPkgWeightAlreadyConfigured(CourierPkgWeightCharge courierPkgWeightCharge)
 			throws CourierTrackerException {
 		try {

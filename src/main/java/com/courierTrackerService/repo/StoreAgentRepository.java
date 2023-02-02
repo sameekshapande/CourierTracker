@@ -12,6 +12,7 @@ public interface StoreAgentRepository extends JpaRepository<StoreAgentDetails, L
 	
 	StoreAgentDetails findByPhonenumber(String phoneNum) throws CourierTrackerException;
 	
-
-	StoreAgentDetails findByPhonenumberAndPassword(String phoneNum,String password) throws CourierTrackerException;
+	StoreAgentDetails findByPhonenumberAndPassword(String phoneNum,String password) 
+			throws CourierTrackerException;
+	StoreAgentDetails findByEmail(String email) throws CourierTrackerException;
 }
